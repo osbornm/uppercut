@@ -49,4 +49,24 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 
+
+  grunt.registerTask('dist', function() {
+      // Update the version in bower.json
+      var bowerConfig = grunt.file.readJSON('bower.json'),
+          version = grunt.config('pkg.version');
+      bowerConfig.version = version;
+      grunt.file.write('bower.json', JSON.stringify(bowerConfig, true, 2));
+
+      console.log('To publish, run:');
+      console.log('    git add bower.json');
+      console.log('    git add -f ./dist/uppercut.js');
+      console.log('    git add -f ./dist/uppercut.min.js');
+      console.log('    git add -f ./dist/uppercut.min.js.map');
+      console.log('    git checkout head');
+      console.log('    git commit -m \'Version ' + version + ' for distribution\'');
+      console.log('    git tag -a v' + version + ' -m \'Add tag v' + version + '\'');
+      console.log('    git checkout master');
+      console.log('    git push origin --tags');
+  });
+
 };

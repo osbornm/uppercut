@@ -1,0 +1,26 @@
+{
+  "name": "uppercut",
+  "homepage": "https://github.com/osbornm/uppercut",
+  "authors": [
+    "Matthew Osborn <http://osbornm.com>"
+  ],
+  "description": "knockoutjs helper library",
+  "dependencies": {
+    "knockoutjs":"~3.3.0"
+  },
+  "main": "dist/uppercut.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "knockout"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
