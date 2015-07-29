@@ -5,8 +5,7 @@ module.exports = function(grunt) {
                         ' * License: <%= pkg.licenses[0].type %> (<%= pkg.licenses[0].url %>)\n' +
                         ' */\n\n';
 
-
-   var name = '<%= pkg.name %>-v<%= pkg.version%>';
+   var name = '<%= pkg.name %>';
 
    grunt.initConfig({
     // pkg is used from templates and therefore
@@ -20,7 +19,7 @@ module.exports = function(grunt) {
         sourceMapUrl: name+'.min.js.map'
       },
       target : {
-        src : ['src/**/*.js'],
+        src : ['dist/' + name + '.js'],
         dest : 'dist/' + name + '.min.js'
       }
     },
@@ -30,7 +29,7 @@ module.exports = function(grunt) {
         banner: bannerContent
       },
       target : {
-        src : ['src/**/*.js'],
+        src : ['build/before.js', 'src/**/*.js', 'build/after.js'],
         dest : 'dist/' + name + '.js'
       }
     },
