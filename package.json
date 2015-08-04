@@ -1,6 +1,6 @@
 {
   "name": "uppercut",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "knockoutjs helper library",
   "repository": {
     "type": "git",
@@ -11,7 +11,10 @@
   ],
   "author": "Matthew M. Osborn",
   "licenses": [
-    { "type": "MIT", "url": "http://www.opensource.org/licenses/mit-license.php" }
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
   ],
   "bugs": {
     "url": "https://github.com/osbornm/uppercut/issues"
@@ -20,6 +23,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jasmine": "^0.9.0",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-uglify": "^0.9.1"
   }

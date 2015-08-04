@@ -1,6 +1,6 @@
 /*global ko */
 ko.trackableObservableArray = function (initValues) {
-    var initArray= ko.unwrap(initValues),
+    var initArray= ko.unwrap(initValues) || [],
         oldValues = initArray.slice(), // Copy the array off
         result = ko.observableArray(initValues); /// should I unwrapp this?
 

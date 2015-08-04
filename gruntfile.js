@@ -41,13 +41,25 @@ module.exports = function(grunt) {
       target: {
         src : ['src/**/*.js']
       }
+    },
+    jasmine: {
+      src: 'dist/uppercut.js',
+      options: {
+        specs: 'spec/*Spec.js',
+        keepRunner: false, // Handy for debuging
+        vendor: [
+            'bower_components/knockoutjs/dist/knockout.js',
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('test', ['default','jasmine']);
 
 
   grunt.registerTask('dist', function() {
