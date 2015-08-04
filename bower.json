@@ -6,7 +6,7 @@
   ],
   "description": "knockoutjs helper library",
   "dependencies": {
-    "knockoutjs":"~3.3.0"
+    "knockoutjs": "~3.3.0"
   },
   "main": "dist/uppercut.js",
   "moduleType": [
@@ -22,5 +22,6 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "version": "0.0.2"
 }
