@@ -58,10 +58,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-  grunt.registerTask('test', ['default','jasmine']);
-
-
   grunt.registerTask('dist', function() {
       // Update the version in bower.json
       var bowerConfig = grunt.file.readJSON('bower.json'),
@@ -80,5 +76,8 @@ module.exports = function(grunt) {
       console.log('    git checkout master');
       console.log('    git push origin --tags');
   });
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('test', ['default','jasmine']);
+  grunt.registerTask('push', ['test', 'dist'])
 
 };
