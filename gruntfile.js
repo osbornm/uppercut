@@ -45,10 +45,11 @@ module.exports = function(grunt) {
     jasmine: {
       src: 'dist/uppercut.js',
       options: {
-        specs: 'spec/*Spec.js',
-        keepRunner: false, // Handy for debuging
+        specs: 'spec/**/*Spec.js',
+        keepRunner: true, // Handy for debuging
         vendor: [
             'bower_components/knockoutjs/dist/knockout.js',
+            'spec/helpers/jasmine.ext.js'
         ]
       }
     }
