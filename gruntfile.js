@@ -46,7 +46,7 @@ module.exports = function(grunt) {
       src: 'dist/uppercut.js',
       options: {
         specs: 'spec/**/*Spec.js',
-        keepRunner: true, // Handy for debuging
+        keepRunner: false, // Handy for debuging
         vendor: [
             'bower_components/knockoutjs/dist/knockout.js',
             'spec/helpers/jasmine.ext.js'
