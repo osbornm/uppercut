@@ -76,7 +76,7 @@ The href binding is just a shortcut for `attr: { href: url }`
 
 Run `npm install` and `bower install` to pull down all the dependencies
 
-## build
+## Build
 
 We use grunt for all our build tasks `grunt` will run JSHint, Bundling, and Minification. `grunt test` will run all the jasmine tests and lastly `grunt push` prepares the bower package, see bellow for more on that.
 
