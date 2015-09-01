@@ -1,6 +1,8 @@
 # uppercut
-KnockoutJS helpers
 
+![Build Status](https://api.travis-ci.org/osbornm/uppercut.svg)
+
+A collection of [KnockoutJS](http://knockoutjs.com) helpers, classes, and bindings that I have found useful during my development.
 
 ## usage
 
