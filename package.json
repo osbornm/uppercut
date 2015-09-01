@@ -19,6 +19,9 @@
   "bugs": {
     "url": "https://github.com/osbornm/uppercut/issues"
   },
+  "scripts": {
+    "test" : "grunt test"
+  },
   "homepage": "https://github.com/osbornm/uppercut#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
